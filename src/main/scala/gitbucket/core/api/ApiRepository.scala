@@ -21,7 +21,7 @@ case class ApiRepository(
   val url = ApiPath(s"/api/v3/repos/${full_name}")
   val clone_url = ApiPath(s"/git/${full_name}.git")
   val html_url = ApiPath(s"/${full_name}")
-  val ssh_url = Some(SshPath(""))
+  val ssh_url = Some(SshPath(s"/${full_name}.git"))
 }
 
 object ApiRepository {
@@ -61,7 +61,7 @@ object ApiRepository {
       watchers = 0,
       forks = 0,
       `private` = false,
-      default_branch = "master",
+      default_branch = "main",
       owner = owner,
       has_issues = true
     )
