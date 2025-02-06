@@ -1,4 +1,4 @@
-GitBucket [![Gitter chat](https://badges.gitter.im/gitbucket/gitbucket.svg)](https://gitter.im/gitbucket/gitbucket) [![build](https://github.com/gitbucket/gitbucket/workflows/build/badge.svg?branch=master)](https://github.com/gitbucket/gitbucket/actions?query=workflow%3Abuild+branch%3Amaster) [![gitbucket Scala version support](https://index.scala-lang.org/gitbucket/gitbucket/gitbucket/latest-by-scala-version.svg)](https://index.scala-lang.org/gitbucket/gitbucket/gitbucket) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/gitbucket/gitbucket/blob/master/LICENSE)
+GitBucket [![Gitter chat](https://badges.gitter.im/gitbucket/gitbucket.svg)](https://gitter.im/gitbucket/gitbucket) [![build](https://github.com/gitbucket/gitbucket/actions/workflows/build.yml/badge.svg)](https://github.com/gitbucket/gitbucket/actions/workflows/build.yml) [![gitbucket Scala version support](https://index.scala-lang.org/gitbucket/gitbucket/gitbucket/latest-by-scala-version.svg)](https://index.scala-lang.org/gitbucket/gitbucket/gitbucket) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/gitbucket/gitbucket/blob/master/LICENSE)
 =========
 
 GitBucket is a Git web platform powered by Scala offering:
@@ -24,7 +24,7 @@ The current version of GitBucket provides many features such as:
 
 Installation
 --------
-GitBucket requires **Java8**. You have to install it, if it is not already installed.
+GitBucket requires **Java 17**. You have to install it, if it is not already installed.
 
 1. Download the latest **gitbucket.war** from [the releases page](https://github.com/gitbucket/gitbucket/releases) and run it by `java -jar gitbucket.war`.
 2. Go to `http://[hostname]:8080/` and log in with ID: **root** / Pass: **root**.
@@ -59,32 +59,16 @@ Support
 - If you can't find same question and report, send it to our [Gitter room](https://gitter.im/gitbucket/gitbucket) before raising an issue.
 - The highest priority of GitBucket is the ease of installation and API compatibility with GitHub, so your feature request might be rejected if they go against those principles.
 
-What's New in 4.38.x
+What's New in 4.42.x
 -------------
-## 4.38.4 - 2 Nov 2022
-- Downgrade MariaDB JDBC drive to avoid unknown error
+## 4.42.1 - 20 Jan 2025
+- Fix LDAP issue with SSL
 
-## 4.38.3 - 30 Oct 2022
-- Fix several issues around multiple assignees in issues and pull requests
-- Fix IllegalStateException when returning unknown avatar image
-
-## 4.38.2 - 20 Sep 2022
-- Resurrect assignee icons on the issue list
-
-## 4.38.1 - 10 Sep 2022
-- Fix comment diff in Chrome 105
-- Fix Markdown table CSS
-- Fix HTML rendering of multiple asignees
-
-## 4.38.0 - 3 Sep 2022
-- Support multiple assignees for Issues and Pull requests
-- Custom fields for issues and pull requests
-- Reset password by users
-- Allow to configure Jetty idle timeout in standalone mode
-- Horizontal scroll for too wide tables in Markdown
-- Hide header content on signin and register page
-- Fix the default charset of the online editor in the repository viewer
-- Fix the milestone count
-- Some improvements and bugfixes for WebAPI and WebHook
+## 4.42.0 - 30 Dec 2024
+- Increase max branch name length 100 -> 255
+- Fix some GitHub incompatible Web APIs
+- Apply user-defined CSS after all plugins
+- Improve performance of listing commit logs
+- Drop Java 11 support. Java 17 is now required
 
 See the [change log](CHANGELOG.md) for all of the updates.
